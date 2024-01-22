@@ -1,0 +1,22 @@
+*.png
+*.jpg
+*.npy
+
+# *.sh
+*.ipynb
+
+VOC2012
+*.pth
+__pycache__
+COCO14
+
+*log*
+
+val_ms_crf*
+
+*.pth
+
+crf_check_map_generation.py
+author_map_vis.py
+
+exp

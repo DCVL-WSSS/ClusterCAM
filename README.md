@@ -1,1 +1,91 @@
-# ClusterCAM
+<h1 align="center">Clustering-guided Class Activation for Weakly Supervised Semantic Segmentation</h1>
+
+This repository is an official Pytorch implementation of the paper [**"Clustering-guided Class Activation for Weakly Supervised Semantic Segmentation"**](https://ieeexplore.ieee.org/abstract/document/10381698) <br>
+Yeong Woo Kim and Wonjun Kim <br>
+***IEEE Access***, Jan. 2024.
+
+## Installation
+
+```bash
+# We suggest to create a new conda environment with python version 3.9
+conda create -n ClusterCAM python=3.9
+conda activate ClusterCAM
+
+# Install Pytorch that is compatible with your CUDA version
+conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+
+# Install requirements
+pip install -r requirements.txt
+```
+
+## Dataset Preparation
+- Download PASCAL VOC2012 dataset: http://host.robots.ox.ac.uk/pascal/VOC/voc2012 (augmented annotations from [SBD dataset](http://home.bharathh.info/pubs/codes/SBD/download.html))
+- Download MS COCO dataset:
+  ```bash
+  wget http://images.cocodataset.org/zips/train2014.zip
+  wget http://images.cocodataset.org/zips/val2014.zip
+  ```
+
+- The resulting data structure should follow the hierarchy as below.
+
+   ```
+   ${REPO_DIR}  
+   |-- voc12  
+   |   |-- VOC2012
+   |       |-- JPEGImages
+   |       |-- Annotations
+   |       |-- ImageSets
+   |       |-- SegmentationClass
+   |       |-- SegmentationClassAug
+   |       |-- ...
+   |-- coco   
+   |   |-- COCO14
+   |       |-- anno
+   |       |-- annotations
+   |       |-- SegmentationClass
+   |       |-- train2014
+   |       |-- val2014
+   |       |-- ...
+   |-- run_e2e.sh 
+   |-- infer_e2e.sh 
+   |-- ...
+   ```
+
+## How to use it
+### Train
+```bash
+sh run_e2e.sh       # for the PASCAL VOC 2012 experiment
+sh run_e2e_coco.sh  # for the PASCAL VOC 2012 experiment
+```
+### Inference
+```bash
+sh infer_e2e.sh      # for the PASCAL VOC 2012 experiment
+sh infer_e2e_coco.sh # for the PASCAL VOC 2012 experiment
+```
+## Results
+### Quantitative result
+| Model                        | Dataset   | Valid | Test | Checkpoint            |
+| ---------------------------- | --------- | ----- | -------- | --------------- |
+| ClsuterCAM                | PASCAL VOC 2012 |70.3   | 70.7     | [Download](https://drive.google.com/file/d/1GqLasPff6hk_X9wJPr-wWmq4XwdhsWB9/view?usp=sharing)|
+| ClsuterCAM                | MS COCO 2014      | 41.8   | -     | [Download](https://drive.google.com/file/d/1Gu01U0g6_usorubqydM3guX6XfOCtvRT/view?usp=sharing)|
+
+
+## Acknowledgments
+This work was supported by the National Research Foundation of Korea (NRF) grant funded by the Korean Government [Ministry of Science and ICT (MSIT)] under Grant 2023R1A2C1003699.
+
+Our implementation and experiments are built on top of open-source GitHub repositories. We thank all the authors who made their code public, which tremendously accelerates our project progress. If you find these works helpful, please consider citing them as well.
+
+[xulianuwa/MCTformer](https://github.com/xulianuwa/MCTformer)  </br>
+[rulixiang/afa](https://github.com/rulixiang/afa)  </br>
+
+## Citation
+```bibtex
+@ARTICLE{10381698,
+  author={Kim, Yeong Woo and Kim, Wonjun},
+  journal={IEEE Access}, 
+  title={Clustering-Guided Class Activation for Weakly Supervised Semantic Segmentation}, 
+  year={2024},
+  volume={12},
+  number={},
+  pages={4871-4880},
+  doi={10.1109/ACCESS.2024.3350176}}
