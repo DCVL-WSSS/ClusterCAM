@@ -6,9 +6,10 @@ Yeong Woo Kim and Wonjun Kim <br>
 <p align="center">
   <img src="https://github.com/DCVL-WSSS/ClusterCAM/assets/49578893/82ccf953-05b2-4b3e-9441-90b3a247a493" alt="The overall architecture of the proposed method."/>
 </p>
-*The overall architecture of the proposed method.*
-## Installation
 
+*The overall architecture of the proposed method.*
+
+## Installation
 ```bash
 # We suggest to create a new conda environment with python version 3.9
 conda create -n ClusterCAM python=3.9
