@@ -3,7 +3,9 @@
 This repository is an official Pytorch implementation of the paper [**"Clustering-guided Class Activation for Weakly Supervised Semantic Segmentation"**](https://ieeexplore.ieee.org/abstract/document/10381698) <br>
 Yeong Woo Kim and Wonjun Kim <br>
 ***IEEE Access***, Jan. 2024. </br>
-![overall](https://github.com/DCVL-WSSS/ClusterCAM/assets/49578893/82ccf953-05b2-4b3e-9441-90b3a247a493)</br>
+<p align="center">
+  <img src="https://github.com/DCVL-WSSS/ClusterCAM/assets/49578893/82ccf953-05b2-4b3e-9441-90b3a247a493" alt="The overall architecture of the proposed method."/>
+</p>
 *The overall architecture of the proposed method.*
 ## Installation
 
@@ -56,12 +58,12 @@ pip install -r requirements.txt
 ### Train
 ```bash
 sh run_e2e.sh       # for the PASCAL VOC 2012 experiment
-sh run_e2e_coco.sh  # for the PASCAL VOC 2012 experiment
+sh run_e2e_coco.sh  # for the MS COCO 2014 experiment
 ```
 ### Inference
 ```bash
 sh infer_e2e.sh      # for the PASCAL VOC 2012 experiment
-sh infer_e2e_coco.sh # for the PASCAL VOC 2012 experiment
+sh infer_e2e_coco.sh # for the MS COCO 2014 experiment
 ```
 ## Results
 ### Quantitative results
