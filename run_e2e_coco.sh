@@ -3,7 +3,6 @@ session=exp
 model=ClusterCAM_coco
 coco_path=coco/COCO14
 
-######## train MCTformer V2 ##########
 CUDA_VISIBLE_DEVICES=${GPU} python main.py --model deit_small_MCTformerV2_patch16_224 \
                 --finetune https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth \
                 --input-size 448 \

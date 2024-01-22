@@ -17,5 +17,4 @@ CUDA_VISIBLE_DEVICES=${GPU} python infer_e2e.py \
                     --scales 0.5 0.75 1.0 1.25 1.5 \
                     --test \
                     --use_crf True
-                    # --save_path_c ${session}/${model}/seg_results_best/val_ms_crf_c_${idx} \
 echo idx=${idx}

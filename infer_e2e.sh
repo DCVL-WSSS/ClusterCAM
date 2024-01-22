@@ -18,9 +18,10 @@ do
     echo idx=${idx}
 done
 
+weight_path=ClusterCAM_VOC.pth
 
 # CUDA_VISIBLE_DEVICES=${GPU} python infer_e2e.py \
-#                     --weights ClusterCAM_VOC.pth \
+#                     --weights ${weight_path} \
 #                     --model deit_small_MCTformerV2_patch16_224 \
 #                     --list_path voc12/val_id.txt \
 #                     --gt_path ${voc12_path}/SegmentationClassAug\
