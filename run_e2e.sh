@@ -8,7 +8,7 @@ CUDA_VISIBLE_DEVICES=${GPU} python main.py --model deit_small_MCTformerV2_patch1
                 --input-size 448 \
                 --num_workers 10 \
                 --batch-size 9 \
-                --epochs 2 \
+                --epochs 80 \
                 --lr 5e-4 \
                 --img-list voc12 \
                 --data-path ${voc12_path} \
@@ -19,5 +19,5 @@ CUDA_VISIBLE_DEVICES=${GPU} python main.py --model deit_small_MCTformerV2_patch1
                 --end_to_end \
                 --scales 1.0 0.75 1.25 \
                 --bg_thr 0.4 \
-                --skip_seg 1 \
+                --skip_seg 50 \
                 --ignore_delta 0.1
