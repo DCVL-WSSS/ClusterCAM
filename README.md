@@ -19,6 +19,7 @@ conda activate ClusterCAM
 conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 
 # Install requirements
+conda install -c  conda-forge pydensecrf
 pip install -r requirements.txt
 ```
 
