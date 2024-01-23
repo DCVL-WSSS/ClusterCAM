@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ```
 
 ## Dataset Preparation
-- Download PASCAL VOC2012 dataset: http://host.robots.ox.ac.uk/pascal/VOC/voc2012 (augmented annotations from [SBD dataset](http://home.bharathh.info/pubs/codes/SBD/download.html))
+- Download PASCAL VOC2012 dataset: http://host.robots.ox.ac.uk/pascal/VOC/voc2012 (augmented annotations from [SBD dataset](http://home.bharathh.info/pubs/codes/SBD/download.html), [DropBox](https://www.dropbox.com/s/oeu149j8qtbs1x0/SegmentationClassAug.zip?dl=0))
 - Download MS COCO dataset:
   ```bash
   wget http://images.cocodataset.org/zips/train2014.zip
