@@ -10,13 +10,16 @@ Yeong Woo Kim and Wonjun Kim <br>
 *The overall architecture of the proposed method.*
 
 ## Installation
+- Requirements
+  - Pytorch >= 1.10
+
 ```bash
 # We suggest to create a new conda environment with python version 3.9
 conda create -n ClusterCAM python=3.9 -y
 conda activate ClusterCAM
 
 # Install Pytorch that is compatible with your CUDA version
-conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=11.1 -c pytorch -c conda-forge
+conda install pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.3 -c pytorch -c conda-forge
 
 # Install requirements
 pip install -r requirements.txt
