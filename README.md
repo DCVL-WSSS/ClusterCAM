@@ -12,7 +12,7 @@ Yeong Woo Kim and Wonjun Kim <br>
 ## Installation
 ```bash
 # We suggest to create a new conda environment with python version 3.9
-conda create -n ClusterCAM python=3.9
+conda create -n ClusterCAM python=3.9 -y
 conda activate ClusterCAM
 
 # Install Pytorch that is compatible with your CUDA version
